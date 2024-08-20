@@ -42,19 +42,13 @@ if 'min_sigma' not in st.session_state:
 if 'max_sigma' not in st.session_state:
     st.session_state['max_sigma'] = 0.01
 
-# S = data.iloc[0, 0]
-# K = data.iloc[0, 1]
-# T = data.iloc[0, 2]
-# sigma = data.iloc[0, 3]
-# r = data.iloc[0, 4]
-
 # parameter input for BS model on the sidebar
 with st.sidebar:
     st.header('Black-Scholes Parameters', divider='red')
     st.session_state['S'] = st.number_input("Current price of underlying ($S_{t}$)", value=st.session_state['S'])
     st.session_state['K'] = st.number_input("Strike price ($K$)", value=st.session_state['K'])
     st.session_state['T'] = st.number_input("Time to maturity (Years)", value=st.session_state['T'])
-    st.session_state['sigma'] = st.number_input("Volatility ($\sigma$)", value=st.session_state['sigma'])
+    st.session_state['sigma'] = st.number_input("Volatility", value=st.session_state['sigma'])
     st.session_state['r'] = st.number_input("Risk-free interest rate ($r$)", value=st.session_state['r'])
 
 # update dataframe accordingly after changes in the sidebar
