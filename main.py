@@ -48,7 +48,7 @@ with st.sidebar:
     st.session_state['S'] = st.number_input("Current price of underlying ($S_{t}$)", value=st.session_state['S'])
     st.session_state['K'] = st.number_input("Strike price ($K$)", value=st.session_state['K'])
     st.session_state['T'] = st.number_input("Time to maturity (Years)", value=st.session_state['T'])
-    st.session_state['sigma'] = st.number_input("Volatility", value=st.session_state['sigma'])
+    st.session_state['sigma'] = st.number_input("Volatility ($\sigma$)", value=st.session_state['sigma'])
     st.session_state['r'] = st.number_input("Risk-free interest rate ($r$)", value=st.session_state['r'])
 
 # update dataframe accordingly after changes in the sidebar
